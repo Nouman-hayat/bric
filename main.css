@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.owl-carousel .owl-item img {
+	width: unset;
+}
+
+.owl-theme .owl-nav {
+	display: none;
+}
+
+.gradient-text {
+	background: linear-gradient(to bottom right, #000000, #239393);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.designation-radio input[type="radio"]:checked + label {
+	border-color: #4baca5; /* Change the background color to red */
+	color: #4baca5; /* Change text color for better visibility */
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+	.tabnav .tab-content-btn.active {
+		color: white;
+		background-color: #4baca5;
+	}
+
+	.tabnav .tab-content-btn {
+		color: black;
+	}
+}
+
+@media (min-width: 768px) {
+	.tabnav {
+		position: relative;
+		z-index: 5;
+	}
+	.tabnav span {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		width: 135px;
+		height: 100%;
+		background-color: #4baca5;
+		border-radius: 20px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		-ms-border-radius: 20px;
+		-o-border-radius: 20px;
+		transition: 0.5s;
+		-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-ms-transition: 0.5s;
+		-o-transition: 0.5s;
+	}
+	.tabnav .tab-content-btn.active {
+		color: white;
+	}
+	.tabnav .tab-content-btn:nth-child(1).active ~ span {
+		left: 0;
+	}
+	.tabnav .tab-content-btn:nth-child(2).active ~ span {
+		left: 135px;
+	}
+	.tabnav .tab-content-btn:nth-child(3).active ~ span {
+		left: 275px;
+		width: 200px;
+	}
+	.tabnav .tab-content-btn:nth-child(4).active ~ span {
+		left: 480px;
+		width: 140px;
+	}
+}
+/* button animation */
+
+/* desktop navigation */
+.mega-menu-link {
+	position: relative;
+}
+.mega-menu-wrapper {
+	position: absolute;
+	width: 900px;
+	z-index: 9;
+	background-color: rgb(255, 255, 255);
+	top: 60px;
+	left: 45px;
+	display: none;
+	border-radius: 5px;
+	border: 1px solid #eaeaea;
+	transition: all 3s ease-in-out;
+	-webkit-transition: all 3s ease-in-out;
+	-moz-transition: all 3s ease-in-out;
+	-ms-transition: all 3s ease-in-out;
+	-o-transition: all 3s ease-in-out;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+.mega-menu-wrapper::after {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 20px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 20px solid white;
+}
+.hidearrow-icon.mega-menu-wrapper::after {
+	display: none;
+}
+
+@media (min-width: 1281px) {
+	.mega-menu-link:hover .mega-menu-wrapper {
+		display: block;
+	}
+}
+.mega-list-wrapper {
+	padding: 10px;
+	display: flex;
+}
+.vertical-menu {
+	display: flex;
+	flex-direction: column;
+
+	background-color: #f5f5f5;
+	padding: 10px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.menu-item {
+	cursor: pointer;
+	padding: 10px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.menu-item:hover {
+	background-color: white;
+}
+/* Styles for the content */
+
+.content {
+	display: none;
+	color: black;
+}
+
+/* Show content when its associated menu item is hovered */
+.menu-item:hover + .content-wrapper > .content {
+	display: block;
+}
+/* desktop navigation */
+@media (min-width: 300px) and (max-width: 1280px) {
+	.mega-menu-wrapper {
+		left: unset;
+		border: unset;
+		width: 100%;
+		display: none;
+		position: relative;
+		top: unset;
+		z-index: unset;
+	}
+	.mega-menu-wrapper.active {
+		display: block;
+	}
+	.mega-menu-wrapper::after {
+		display: none;
+	}
+	.mega-list-wrapper {
+		flex-direction: column;
+	}
+	.content {
+		padding-left: 8px;
+		background-color: white;
+
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	.content.active {
+		display: block;
+	}
+	.menu-item {
+		background-color: #f5f5f5;
+	}
+	.menu-item.active {
+		background-color: white;
+	}
+}
