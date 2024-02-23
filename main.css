@@ -27,6 +27,39 @@ body {
 	color: #4baca5; /* Change text color for better visibility */
 }
 
+
+
+
+/* fixed header */
+.fixed-header-1{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	background-color:#4BACA5 ;
+	transition: top 2s ease-in-out;
+	-webkit-transition: top 2s ease-in-out;
+	-moz-transition: top 2s ease-in-out;
+	-ms-transition: top 2s ease-in-out;
+	-o-transition: top 2s ease-in-out;
+	
+}
+.fixed-header-2{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	background-color:white ;
+	transition: top 2s ease-in-out;
+	-webkit-transition: top 2s ease-in-out;
+	-moz-transition: top 2s ease-in-out;
+	-ms-transition: top 2s ease-in-out;
+	-o-transition: top 2s ease-in-out;
+	box-shadow: 1px 1px 8px rgba(228, 228, 228, 0.8);
+}
+/* fixed header */
 @media (min-width: 300px) and (max-width: 768px) {
 	.tabnav .tab-content-btn.active {
 		color: white;
@@ -67,6 +100,7 @@ body {
 	}
 	.tabnav .tab-content-btn:nth-child(1).active ~ span {
 		left: 0;
+		
 	}
 	.tabnav .tab-content-btn:nth-child(2).active ~ span {
 		left: 135px;

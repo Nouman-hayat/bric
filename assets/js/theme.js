@@ -1,6 +1,32 @@
 // intialize aos animation
 AOS.init();
 
+// fixed header
+  window.addEventListener('scroll', function() {
+        var header1 = document.getElementById('fixed-header-1');
+        var header2 = document.getElementById('fixed-header-2');
+        var scrollPosition = window.scrollY;
+
+	  if (header1) {
+		    if (scrollPosition >= 200) {
+            header1.classList.add('fixed-header-1');
+            header.classList.remove('relative');
+        } else {
+            header1.classList.remove('fixed-header-1');
+            header1.classList.add('relative');
+        }
+	   }
+	  if (header2) {
+			if (scrollPosition >= 200) {
+            header2.classList.add('fixed-header-2');
+            header2.classList.remove('relative');
+        } else {
+            header2.classList.remove('fixed-header-2');
+            header2.classList.add('relative');
+        }
+		}
+    });
+
 // mobile mega menu
 
 var mobilemegamenulink = document.getElementById("mobile-megamenu-link");

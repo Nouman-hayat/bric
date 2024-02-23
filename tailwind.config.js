@@ -23,6 +23,16 @@ module.exports = {
 				smalltext: "1rem", // Extra small size
 			},
 		},
+		 container: {
+      center: true,
+      padding: '1rem',
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1200px', // Set max-width to 1200px for xl screens
+      },
+    },
 	},
 	plugins: [],
 };
