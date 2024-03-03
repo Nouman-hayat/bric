@@ -45,6 +45,14 @@ body {
 	-o-transition: top 2s ease-in-out;
 	
 }
+@media (min-width: 1281px) {
+.fixed-header-1 .fixed-container,.fixed-header-2 .fixed-container{
+	padding-top: 0;
+	padding-bottom: 0;
+}}
+.fixed-header-1 .fixed-header-logo,.fixed-header-2 .fixed-header-logo{
+	width: 140px;
+}
 .fixed-header-2{
 	position: fixed;
 	top: 0;
